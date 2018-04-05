@@ -15,7 +15,8 @@ export class SelectplayerComponent implements OnInit {
   heros;
   tabHeros = [];
   nbrPlayer = 0 ;
-  player = [];
+  player1 = this.chooseHeros.players[0];
+  player2 = this.chooseHeros.players[1];
 
   constructor(private http: HttpClient,
               private router: Router,
@@ -51,12 +52,16 @@ export class SelectplayerComponent implements OnInit {
   }
 
   choosePlayer(index) {
-    this.player[this.nbrPlayer] = this.tabHeros[index];
+    this.chooseHeros.players[this.nbrPlayer] = this.tabHeros[index];
     this.nbrPlayer = this.nbrPlayer + 1 ;
-    if(this.player.length == 2 ){
-      this.router.navigate(['gamepage']);
+    if(this.chooseHeros.players.length == 2 ){
+    
     }
     
+  }
+
+  go() {
+    this.router.navigate(['gamepage']);
   }
 
 

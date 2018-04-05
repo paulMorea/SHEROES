@@ -1,11 +1,18 @@
 <div class="container-fluid">
   <div class="row bord">
-    <ul *ngFor= "let hero of tabHeros; let i = index" >
-        <img (click)="choosePlayer(i)" src={{hero.images.sm}} /> 
-      {{hero.name}}
-  </ul>
-    
+    <ul *ngFor="let hero of tabHeros; let i = index">
+      <img (click)="choosePlayer(i)" src={{hero.images.sm}} /> {{hero.name}}
+    </ul>
+
     <div class="row">
       <button (click)="listPlayer()">Next</button>
     </div>
+  </div>
+  <button (click)='go()' *ngIf="this.chooseHeros.players.length == 2">GO !</button>
+
+  <div *ngIf="this.chooseHeros.players.length == 0 ">
+    <p>Joueur 1 choisi un personnage !</p>
+  </div>
+  <div *ngIf="this.chooseHeros.players.length == 1 ">
+    <p>Joueur 2 choisi un personnage !</p>
   </div>
