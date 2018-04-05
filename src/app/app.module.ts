@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SelectplayerComponent } from './selectplayer/selectplayer.component';
 import { GamepageComponent } from './gamepage/gamepage.component';
+import { ChooseHerosService } from './choose-heros.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,10 +24,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
-    // other imports here
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ChooseHerosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

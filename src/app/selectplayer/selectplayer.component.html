@@ -1,3 +1,11 @@
-<p>
-  selectplayer works!
-</p>
+<div class="container-fluid">
+  <div class="row bord">
+    <ul *ngFor= "let hero of tabHeros; let i = index" >
+        <img (click)="choosePlayer(i)" src={{hero.images.sm}} /> 
+      {{hero.name}}
+  </ul>
+    
+    <div class="row">
+      <button (click)="listPlayer()">Next</button>
+    </div>
+  </div>
