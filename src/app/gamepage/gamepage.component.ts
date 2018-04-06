@@ -7,12 +7,22 @@ import { ChooseHerosService } from '../choose-heros.service';
   styleUrls: ['./gamepage.component.css']
 })
 export class GamepageComponent implements OnInit {
+  
+  player1 = this.chooseHeros.players[0];
+  player2 = this.chooseHeros.players[1];
 
- player;
 
   constructor(private chooseHeros: ChooseHerosService) { }
 
   ngOnInit() {
+    
+   
+
+   console.log(this.player1);
+   console.log(this.player2);
   }
+
+  
+  
 
 }
