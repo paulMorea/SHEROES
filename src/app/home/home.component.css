@@ -1,0 +1,53 @@
+@font-face 
+{
+	font-family: 'Faster One';
+	src: url('https://fonts.googleapis.com/css?family=Faster+One');
+}
+.body{
+    position:absolute;
+   
+   
+}
+#texte{
+    font-family: 'Faster One', cursive;
+    font-size: 500%;
+    color: #05FA36;
+    margin-left: 25vw;
+    margin-top: 30vh; 
+    position: absolute;
+}
+
+
+
+.button {
+    display: inline-block;
+    position: absolute;
+    padding: 15px 25px;
+    font-size: 250%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #05FA36;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px black;
+    margin-left: 47vw;
+    margin-top: 75vh; 
+  }
+  
+  .button:hover {background-color: #FF2200}
+  
+  .button:active {
+    background-color: #FF2200;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+  }
+  img{
+      width:100%;
+      
+  }
+  .container-fluid{
+      padding: 0px;
+  }
