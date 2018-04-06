@@ -1,7 +1,125 @@
-.bord{
-    border: solid 5px;
+@font-face 
+{
+	font-family: 'Faster One';
+	src: url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 }
 
-.player{
+/* .bord{
     border: solid 5px;
+} */
+
+/* .player{
+    border: solid 5px;
+} */
+.selectpg{
+    background-image: url("assets/images/comics.jpg"); 
+}
+.listep{
+    padding-left:0.5vw;
+    padding-right:0.5vw;
+    padding-top: 0.3vh;
+    margin: auto;
+    margin-top:2vh;
+    border: solid 5px;
+    background-color: darkturquoise;
+}
+.listep:hover{
+    border: solid 6px red ;
+}
+.listenp{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 120%;
+}
+.listimg{
+    border: solid 2px;
+}
+.rules{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 120%;
+    color: rgb(248, 245, 245); 
+    background-color: steelblue;
+    opacity: 0.9;
+    border: solid 3px black ;
+    border-radius: 5%;
+    padding-left:1vw;
+}
+.titrerules{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 200%;
+    color: rgb(248, 245, 245); 
+    background-color: steelblue;
+    opacity: 0.9;
+    border: solid 3px black ;
+    padding-left:6vw;
+    border-radius: 40%;
+}
+.ayr{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 400%;
+    color: rgb(248, 4, 17); 
+    background-color: darkturquoise;
+    opacity: 0.9;
+    border: solid 3px black ;
+    padding: left 20vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 40%;
+}
+.choosep{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 350%;
+    color: rgb(248, 4, 17); 
+    background-color: darkturquoise;
+    opacity: 0.9;
+    border: solid 3px black ;
+    padding-left:3vw;
+    border-radius: 5%;
+}
+.plr{
+    text-decoration: underline;
+}
+.button {
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    background-color:#C7C7C7;
+    border:solid 2px; ;
+    font-size: 35px;
+    color: black;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 12vw;
+    margin-top: 3vh;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: darkturquoise;
+    display: block;
+    position: absolute;
+    padding-top: 400%;
+    padding-left: 450%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.jumbotron{
+    background-image: url("assets/images/comics.jpg"); 
+    
 }

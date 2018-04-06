@@ -29,7 +29,7 @@ export class SelectplayerComponent implements OnInit {
 
   listPlayer() {
 
-    let myHeros = this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heros => {
+    const myHeros = this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heros => {
       console.log(heros);
       this.heros = heros;
 
@@ -37,8 +37,8 @@ export class SelectplayerComponent implements OnInit {
 
 
       let i = 0;
-      while (i < 8) {
-        let num = Math.floor(Math.random() * this.heros.length);
+      while (i < 12) {
+        const num = Math.floor(Math.random() * this.heros.length);
         this.tabHeros[i] = heros[num];
         i++;
       }

@@ -1,18 +1,48 @@
-<div class="container-fluid">
-  <div class="row bord">
-    <ul *ngFor="let hero of tabHeros; let i = index">
-      <img (click)="choosePlayer(i)" src={{hero.images.sm}} /> {{hero.name}}
-    </ul>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
-    <div class="row">
-      <button (click)="listPlayer()">Next</button>
+
+
+<div class="container-fluid selectpg">
+  <div class="row bord">
+    <ul class="listep" *ngFor="let hero of tabHeros; let i = index">
+      <img class="listimg" (click)="choosePlayer(i)" src={{hero.images.sm}} />
+      <p class="listenp">{{hero.name}}</p>
+    </ul>
+  
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <h2 class="titrerules">
+          Hello, Heroes ! (RULES)
+        </h2>
+        <p class="rules">
+          The rules of random heroes are simple. Each player selects a hero from a random list of more than 500 heroes. If the list
+          does not satisfy you, you can press the "Next" button located just below to generate again a list of 12 random heroes.
+          Once this step accomplished, click on "GO" and the game will start. During the game, the players each play their
+          turn, and must use the different spells generated randomly. A hero is never afraid so try your luck!
+        </p>
+        <p>
+          <button class="button" (click)="listPlayer()">Next</button>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <h2 class="ayr">
+          ARE YOU READY?
+        </h2>
+        <div class="choosep" *ngIf="this.chooseHeros.players.length == 0 ">
+          <p>Click to select your <span class="plr">player One</span> !</p>
+        </div>
+        <div class="choosep" *ngIf="this.chooseHeros.players.length == 1 ">
+          <p>Click to select your <span class="plr">player Two</span> !</p>
+        </div>
+        <div>
+          <button class="button" (click)='go()' *ngIf="this.chooseHeros.players.length == 2">GO !</button>
+        </div>
+      </div>
     </div>
   </div>
-  <button (click)='go()' *ngIf="this.chooseHeros.players.length == 2">GO !</button>
-
-  <div *ngIf="this.chooseHeros.players.length == 0 ">
-    <p>Joueur 1 choisi un personnage !</p>
-  </div>
-  <div *ngIf="this.chooseHeros.players.length == 1 ">
-    <p>Joueur 2 choisi un personnage !</p>
-  </div>
+</div>
+</div>
