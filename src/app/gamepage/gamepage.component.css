@@ -1,45 +1,99 @@
-body{
-    background-image: url("http://www.ajordanscart.com/wp-content/uploads/2017/01/justice_league_invitations_free_3.jpg");
-    background-size: cover;
+@font-face 
+{
+	font-family: 'Faster One';
+	src: url('https://fonts.googleapis.com/css?family=Faster+One');
 }
 
-.card{
+.gamepage{
+    background-image: url("assets/images/gamepage.jpg"); 
+    width: 1280px;
+    height: 720px;
+    
+}
+#logo{
+    font-family: 'Faster One', cursive;
+    font-size: 300%;
+    color: #05FA36;
+    margin-left: 23vw;
+    margin-top: 3vh; 
+    margin-bottom: 4vh;
+    border: solid 5px;
+    position: absolute;
+    background-color: white;
+}
+.imgone{
+margin-left:1.5vw;
+border: solid 5px;
+}
+.imgtwo{
+    margin-left:1.5vw;
+    border: solid 5px;
+}
+.cardpone{
 
-    height: 11.5cm;
-    max-width: 340px;
+    height: 350px;
+    max-width: 300px;
     border: solid 5px;
     border-radius: 25px;
     line-height:5.5px;
-    background-color: coral;
+    background-color: #05FA36;
+    margin-left:6vw;
+    margin-top: 16vh;
 }
-.card p{
-    transform: translateY(5.9vh);
+.cardptwo{
+    height: 350px;
+    max-width: 300px;
+    border: solid 5px;
+    border-radius: 25px;
+    line-height:5.5px;
+    background-color: #05FA36;
+    margin-left:28vw;
+    margin-top: 16vh;
 }
-.card img{
+
+
+
+.row img{
     transform: translateY(1.6vh);
     border-radius: 8px;
+    border: solid 6px;
+}
+.bartailleone{
+    width: 100%;
+    transform: translateY(16vh);
+    /* margin-left:6vw; */
+    margin-top: 4vh;
     border: solid 4px;
 }
-.bartaille{
+
+.bartailletwo{
     width: 100%;
-    transform: translateY(2.8vh);
-    
+    transform: translateY(16vh);
+    /* margin-left:28vw; */
+    margin-top: 4vh;
+    border: solid 4px;
 }
+
+
 
 .colorbar{
     background-color: rgb(206, 23, 23);
 }
 
 .cardspell{
-    height: 5.5cm;
-    max-width: 170px;
-    min-width: 170px;
-    background-color: coral;
+    height: 4.5cm;
+    max-width: 200px;
+    min-width: 120px;
+    background-color: #05FA36;
     border-radius: 18px;
     border: solid 3px;
     transform: translate(50px);
-}
-
+    margin-left:30px;
+    margin-top:-170px; 
+} 
+.cardspell:first-child{
+    margin-left:270px;
+} 
 .cardspell:hover{
     cursor: pointer;
 }
