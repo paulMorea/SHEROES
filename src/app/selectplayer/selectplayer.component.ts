@@ -52,11 +52,16 @@ export class SelectplayerComponent implements OnInit {
   }
 
   choosePlayer(index) {
+    if(this.tabHeros[index] == this.chooseHeros.players[0]){
+      console.log("merci de choisir un personnage différent");
+
+    }else {
     this.chooseHeros.players[this.nbrPlayer] = this.tabHeros[index];
     this.nbrPlayer = this.nbrPlayer + 1 ;
     if(this.chooseHeros.players.length == 2 ){
     
     }
+  }
     
   }
 

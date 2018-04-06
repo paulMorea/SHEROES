@@ -8,7 +8,7 @@
       <button (click)="listPlayer()">Next</button>
     </div>
   </div>
-  <button (click)='go()' *ngIf="this.chooseHeros.players.length == 2">GO !</button>
+  <button (click)='go()' *ngIf="this.chooseHeros.players.length > 1">GO !</button>
 
   <div *ngIf="this.chooseHeros.players.length == 0 ">
     <p>Joueur 1 choisi un personnage !</p>

@@ -1,11 +1,90 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col justify-content-left">
-      <img src={{player1.images.lg}}>
-    </div>
-    <div class="col justify-content-right">
-      <img src={{player2.images.lg}}>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col justify-content-left card">
+        <img src={{player1.images.lg}} height="200" width="300">
+        <div class="progress bartaille">
+          <div class="progress-bar-danger colorbar" [ngStyle]="{'width': health}">
+            <span class="sr-only">(danger)</span>
+          </div>
+          <div class="progress-bar" [ngStyle]="{'width': armor}">
+            <span class="sr-only"></span>
+          </div>
+
+        </div>
+        <p>vitality : {{player1.powerstats.strength}} </p>
+        <p>intelligence : {{player1.powerstats.intelligence}} </p>
+        <p>durability : {{player1.powerstats.durability}} </p>
+        <p>power : {{player1.powerstats.power}} </p>
+        <p>fight : {{player1.powerstats.combat}} </p>
+
+      </div>
+
+
+      <div class="col justify-content-left card">
+        <img src={{player2.images.lg}} height="200" width="300">
+        <div class="progress bartaille">
+          <div class="progress-bar-danger colorbar" [ngStyle]="{'width': health2}">
+            <span class="sr-only">(danger)</span>
+          </div>
+          <div class="progress-bar" [ngStyle]="{'width': armor2}">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+        <p>vitality : {{player2.powerstats.strength}} </p>
+        <p>intelligence : {{player2.powerstats.intelligence}} </p>
+        <p>durability : {{player2.powerstats.durability}} </p>
+        <p>power : {{player2.powerstats.power}} </p>
+        <p>fight : {{player2.powerstats.combat}} </p>
+      </div>
     </div>
   </div>
 
-</div>
+
+
+
+
+  <div class="row">
+
+
+
+    <div *ngIf="turn == 0 && player1.cards">
+      <div class="col-1 justify-content-left cardspell" (click)="okHeal()">
+        <p id="placecardP1C1">{{player1.cards[0].text}}</p>
+      </div>
+      <div class="col-1 justify-content-left cardspell" (click)="okDef()">
+        <p id="placecardP1C2">{{player1.cards[1].text}}</p>
+      </div>
+      <div class="col-1 justify-content-left cardspell" (click)="okCAC()">
+        <p id="placecardP1C3">{{player1.cards[2].text}} </p>
+      </div>
+      <div class="col-1 justify-content-left cardspell" (click)="okMagic()">
+        <p id="placecardP1C4">{{player1.cards[3].text}} </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div *ngIf="turn == 1 && player2.cards">
+      <div class="col-1 justify-content-right cardspell" (click)="okHealbis()">
+        <p id="placecardP2C1"> {{player2.cards[0].text}}</p>
+      </div>
+      <div class="col-1 justify-content-right cardspell" (click)="okDefbis()">
+        <p id="placecardP2C2"> {{player2.cards[1].text}}</p>
+      </div>
+      <div class="col-1 justify-content-right cardspell" (click)="okCACbis()">
+        <p id="placecardP2C3"> {{player2.cards[2].text}} </p>
+      </div>
+      <div class="col-1 justify-content-right cardspell" (click)="okMagicbis()">
+        <p id="placecardP2C4">{{player2.cards[3].text}} </p>
+      </div>
+    </div>
+  </div>
+
+  
+  
+</body>

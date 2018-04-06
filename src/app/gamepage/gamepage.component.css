@@ -1,0 +1,45 @@
+body{
+    background-image: url("http://www.ajordanscart.com/wp-content/uploads/2017/01/justice_league_invitations_free_3.jpg");
+    background-size: cover;
+}
+
+.card{
+
+    height: 11.5cm;
+    max-width: 340px;
+    border: solid 5px;
+    border-radius: 25px;
+    line-height:5.5px;
+    background-color: coral;
+}
+.card p{
+    transform: translateY(5.9vh);
+}
+.card img{
+    transform: translateY(1.6vh);
+    border-radius: 8px;
+    border: solid 4px;
+}
+.bartaille{
+    width: 100%;
+    transform: translateY(2.8vh);
+    
+}
+
+.colorbar{
+    background-color: rgb(206, 23, 23);
+}
+
+.cardspell{
+    height: 5.5cm;
+    max-width: 170px;
+    min-width: 170px;
+    background-color: coral;
+    border-radius: 18px;
+    border: solid 3px;
+    transform: translate(50px);
+}
+
+.cardspell:hover{
+    cursor: pointer;
+}
